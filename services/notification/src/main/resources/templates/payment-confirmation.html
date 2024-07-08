@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f6f6f6;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .email-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .email-body {
+            line-height: 1.6;
+        }
+        .email-footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #666666;
+        }
+    </style>
+</head>
+<body>
+<div class="email-container">
+    <div class="email-header">
+        <h2>Payment Confirmation</h2>
+    </div>
+    <div class="email-body">
+        <p>Dear <span th:text="${customerName}">Customer Name</span>,</p>
+        <p>We are pleased to inform you that your payment of <strong>$<span th:text="${amount}">Amount</span></strong> for the order reference <strong><span style="text-transform: uppercase" th:text="${orderReference}">Order Reference</span></strong> has been successfully processed.</p>
+        <p>Thank you for your purchase!</p>
+    </div>
+    <div class="email-footer">
+        <p>This is an automated message. Please do not reply to this email.</p>
+        <p>&copy; 2024 techiebroz. All rights reserved.</p>
+    </div>
+</div>
+</body>
+</html>
