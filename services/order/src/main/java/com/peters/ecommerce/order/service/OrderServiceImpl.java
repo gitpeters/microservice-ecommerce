@@ -7,7 +7,6 @@ import com.peters.ecommerce.order.dto.*;
 import com.peters.ecommerce.order.exceptions.BusinessException;
 import com.peters.ecommerce.order.exceptions.OrderNotFoundException;
 import com.peters.ecommerce.order.kafka.OrderProducer;
-import com.peters.ecommerce.order.model.Order;
 import com.peters.ecommerce.order.repository.OrderRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
